@@ -32,38 +32,76 @@
         border: 0;
       }
 
-      /* Overlay for custom messaging */
+      /* Overlay for custom messaging and menu */
       .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        padding: 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         z-index: 10;
-        color: #f0f0f0;
+        color: #e8e8e8;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
           'Helvetica Neue', Arial, sans-serif;
+        pointer-events: none; /* allow clicks to pass through unless on the menu */
       }
 
       .overlay h1 {
-        margin: 0;
-        font-size: 2rem;
+        margin: 0.5rem 0;
+        font-size: 2.5rem;
         font-weight: 700;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
       }
 
       .overlay p {
-        margin: 0.5rem 0;
-        font-size: 1rem;
+        margin: 0.25rem 0;
+        font-size: 1.1rem;
       }
 
-      .overlay a {
+      /* Menu styling */
+      .menu {
+        list-style: none;
+        padding: 0.5rem 1rem;
+        margin: 1rem 0;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        pointer-events: auto; /* enable menu links */
+      }
+
+      .menu li {
+        margin: 0.5rem 0;
+      }
+
+      .menu li a {
+        color: #ff80ff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+      }
+
+      .menu li a:hover {
+        background: rgba(255, 128, 255, 0.2);
+        box-shadow: 0 0 6px #ff80ff;
+      }
+
+      .overlay .back-link {
+        margin-top: 1rem;
+        font-size: 0.9rem;
         color: #62c2e5;
         text-decoration: none;
-        font-weight: 600;
+        pointer-events: auto;
       }
 
-      .overlay a:hover {
+      .overlay .back-link:hover {
         text-decoration: underline;
       }
     </style>
@@ -76,9 +114,15 @@
         allowfullscreen
       ></iframe>
       <div class="overlay">
-        <h1>Welcome to Hemanth's Data Ramen</h1>
-        <p>Explore my data projects through an immersive ramen shop experience.</p>
-        <p><a href="index.html">Back to Portfolio</a></p>
+        <h1>Hemanth's Data Ramen</h1>
+        <p>Grab a seat and explore my menu of projects.</p>
+        <ul class="menu">
+          <li><a href="https://github.com/hemanthkori/Development-of-world-economy-on-Gambia-" target="_blank">Gambia Economy Analysis</a></li>
+          <li><a href="https://github.com/hemanthkori/Evaluation-of-freight-transported-on-Road-and-Fuel-consumption-in-Latvia-" target="_blank">Latvia Freight &amp; Fuel Study</a></li>
+          <li><a href="https://github.com/hemanthkori/Internatioanl_Monetory_Funds" target="_blank">IMF Data Exploration</a></li>
+          <li><a href="https://github.com/hemanthkori/power-BI-dashboard" target="_blank">Job Market Dashboard</a></li>
+        </ul>
+        <a class="back-link" href="index.html">Back to Portfolio</a>
       </div>
     </div>
   </body>
