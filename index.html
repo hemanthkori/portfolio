@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
   <!-- Hero Section -->
-  <header class="hero">
+  <header class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Hello, I'm <span class="highlight">Hemanth&nbsp;Kori</span></h1>
@@ -97,6 +101,10 @@
     <p>&copy; <span id="year"></span> Hemanth&nbsp;Kori. All rights reserved.</p>
   </footer>
 
+  <!-- Load dependencies for animated background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
