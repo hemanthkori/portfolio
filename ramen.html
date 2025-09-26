@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramen Experience</title>
+    <!-- Reuse the main portfolio styles for consistent typography -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Full‑screen iframe container */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #050710;
+      }
+
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* Overlay for custom messaging */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        z-index: 10;
+        color: #f0f0f0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, sans-serif;
+      }
+
+      .overlay h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .overlay p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      .overlay a {
+        color: #62c2e5;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .overlay a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iframe-container">
+      <!-- Embed the public Ramen Shop interactive experience. Note: the external site may restrict embedding -->
+      <iframe
+        src="https://ramen-shop-pro-jesse-s-pro-team-59sda84f.vercel.app"
+        allowfullscreen
+      ></iframe>
+      <div class="overlay">
+        <h1>Welcome to Hemanth's Data Ramen</h1>
+        <p>Explore my data projects through an immersive ramen shop experience.</p>
+        <p><a href="index.html">Back to Portfolio</a></p>
+      </div>
+    </div>
+  </body>
+</html>
